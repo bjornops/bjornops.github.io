@@ -1,7 +1,8 @@
 ---
-title: "Post: Notice"
+title: "Notice syntax in Jekyll"
 categories:
   - Blog
+  - Meta
 tags:
   - Post Formats
   - notice

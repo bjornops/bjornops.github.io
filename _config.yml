@@ -27,9 +27,9 @@ markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 10 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: "Europe/Oslo" # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 include:
   - _pages
@@ -56,9 +56,9 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "Bjørn"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Developing developer."
+  name   : "Bjørn Opstad"
+  avatar : "/assets/images/profile.png"
+  bio    : ".Net, Docker, Elasticsearch. You know... Tech stuff."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
@@ -95,8 +95,8 @@ defaults:
       author_profile: true
       read_time: true
       comments: true
-      share: true
       related: true
+      # share: true
   # _pages
   - scope:
       path: "_pages"
