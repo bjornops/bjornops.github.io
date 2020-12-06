@@ -56,9 +56,9 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "Bjørn"
+  name   : "Bjørn Opstad"
   avatar : "/assets/images/profile.png"
-  bio    : "Another developer"
+  bio    : ".Net, Docker, Elasticsearch. You know... Tech stuff."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
