@@ -115,5 +115,5 @@ tag_archive:
 
 jekyll_analytics:
   Matomo:
-    url: http://analytics.blog.opstad.it.linux175.unoeuro-server.com/matomo
+    url: "http://analytics.blog.opstad.it.linux175.unoeuro-server.com/matomo/"
     siteId: "1"
