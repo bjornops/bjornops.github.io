@@ -54,6 +54,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-analytics
 
 author:
   name   : "Bjørn Opstad"
@@ -111,3 +112,8 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+jekyll_analytics:
+  Matomo:
+    url: http://analytics.blog.opstad.it.linux175.unoeuro-server.com/matomo
+    siteId: "1"
