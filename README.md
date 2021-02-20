@@ -1,4 +1,13 @@
-# Minimal Mistakes remote theme starter
+# bjornops.github.io
+
+## Usage
+Run locally at pwd:
+
+```bash
+docker run -p 8080:4000 -v $(pwd):/site bretfisher/jekyll-serve
+```
+
+## Minimal Mistakes remote theme starter
 
 Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
 
