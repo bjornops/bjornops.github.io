@@ -112,8 +112,3 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
-
-jekyll_analytics:
-  Matomo:
-    url: "analytics.blog.opstad.it.linux175.unoeuro-server.com/matomo"
-    siteId: "1"
