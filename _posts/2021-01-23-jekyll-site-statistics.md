@@ -1,6 +1,7 @@
 ---
 title: "Jekyll Site Statistics"
 last_modified_at: 2021-01-24T21:12:02+01:00
+excerpt: "Here is my short analysis of the different trackers that are mentioned in the plugin hendrikschneider/jekyll-analytics"
 categories:
   - Blog
   - Tech
