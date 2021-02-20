@@ -1,0 +1,37 @@
+<mxfile host="65bd71144e" modified="2021-01-18T21:04:09.989Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" version="13.10.0" etag="1R-PDeA4lLGLhUPdwNu4" type="embed">
+    <diagram id="MpTA7MBj7_nfG-VL-hTQ" name="Page-1">
+        <mxGraphModel dx="1742" dy="1150" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="583" pageHeight="413" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="5" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#60a917;sketch=1;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="7.6899999999999995" y="138.24" width="180" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#fa6800;sketch=1;strokeColor=#C73500;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="205" y="138.24" width="180" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;sketch=1;fillColor=#e51400;strokeColor=#B20000;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="400" y="138.23500000000013" width="180" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.monitor;strokeColor=#333333;fillColor=#B3B3B3;" vertex="1" parent="1">
+                    <mxGeometry x="50.00000000000006" y="164.49" width="95.38" height="77.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.desktop_pc;strokeColor=#333333;fillColor=#B3B3B3;" vertex="1" parent="1">
+                    <mxGeometry x="275" y="163.24" width="40" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.external_storage;rounded=1;labelBackgroundColor=none;strokeColor=#333333;fillColor=#B3B3B3;" vertex="1" parent="1">
+                    <mxGeometry x="452.5" y="161.57000000000002" width="75" height="83.33" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Presentation" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;rounded=1;labelBackgroundColor=none;fontColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="48" y="290" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Application" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;rounded=1;labelBackgroundColor=none;fontColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="245" y="290" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Database" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;rounded=1;labelBackgroundColor=none;fontColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="290" width="100" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -54,6 +54,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-analytics
 
 author:
   name   : "Bjørn Opstad"
