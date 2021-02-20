@@ -1,0 +1,19 @@
+<mxfile host="65bd71144e" modified="2021-02-15T20:21:24.031Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" version="13.10.0" etag="KvBejfEPAQpGc__3XweZ" type="embed">
+    <diagram id="e7gD4TK50eiSvPdSZQ9r" name="Page-1">
+        <mxGraphModel dx="897" dy="861" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="583" pageHeight="413" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;sketch=1;fillColor=#e51400;strokeColor=#B20000;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="202" y="110.99500000000013" width="180" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.external_storage;rounded=1;labelBackgroundColor=none;strokeColor=#333333;fillColor=#B3B3B3;" vertex="1" parent="1">
+                    <mxGeometry x="254.5" y="134.33" width="75" height="83.33" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Storage" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;rounded=1;labelBackgroundColor=none;fontColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="242" y="262.76" width="100" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
