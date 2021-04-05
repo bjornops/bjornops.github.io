@@ -59,7 +59,7 @@ plugins:
 author:
   name   : "Bjørn Opstad"
   avatar : "/assets/images/profile.png"
-  bio    : ".Net, Docker, Elasticsearch. You know... Tech stuff."
+  bio    : "Tech notes and articles every sometimes"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
