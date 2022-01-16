@@ -7,6 +7,18 @@ Run locally at pwd:
 docker run -p 8080:4000 -v $(pwd):/site bretfisher/jekyll-serve
 ```
 
+Optional add `-e JEKYLL_ENV=production`
+
+To run with local Matomo tracking, use the following command after running Matomo as described below.
+
+```bash
+docker run -p 80:4000 -e JEKYLL_ENV=production -v $(pwd):/site bretfisher/jekyll-serve bundle exec jekyll serve --force_polling --config _config.yml,_config_dev.yml -H 0.0.0.0 -P 4000
+```
+
+## Matomo Tracking
+
+To run matomo locally, `cd matomo` and `docker compose up`.
+
 ## Minimal Mistakes remote theme starter
 
 Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).

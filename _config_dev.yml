@@ -1,0 +1,4 @@
+jekyll_analytics:
+  Matomo:
+    url: loopback.opstad.lan:8080
+    siteId: "1"
