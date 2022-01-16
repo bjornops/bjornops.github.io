@@ -17,6 +17,7 @@ title: Dev Blog
 email:
 description: >- # this means to ignore newlines until "baseurl:"
   Dev scribbles, notes and experiences
+baseurl: ''
 twitter_username: username
 github_username: username
 minimal_mistakes_skin: air
