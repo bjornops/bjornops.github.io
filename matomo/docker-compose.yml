@@ -1,18 +1,40 @@
-version: "3"
+version: "3.8"
 
 services:
-  db:
-    image: mariadb
-    command: --max-allowed-packet=64MB
+  traefik:
+    # https://hub.docker.com/_/traefik/
+    image: traefik:latest
+    container_name: "traefik"
+    command:
+      - "--log.level=DEBUG"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.websecure.address=:443"
+      #- "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+      - "--certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
+      - "--certificatesresolvers.myresolver.acme.email=postmaster@example.com"
+      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
     restart: always
+    networks:
+      - "lb"
     volumes:
-      - db:/var/lib/mysql
-    environment:
-      - MYSQL_ROOT_PASSWORD=password123
-    env_file:
-      - ./db.env
+      #- "./letsencrypt:/letsencrypt"
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    ports:
+      # Map port 80 and 443 on the host to this container.
+      - "80:80"
+      - "443:443"
+    labels:
+      - "traefik.docker.network=frontend"
+      - "traefik.enable=true"
+      #- "traefik.frontend.rule=Host:${TRAEFIK_DOMAINS}; PathPrefixStrip:/traefik"
+      - "traefik.port=8080"
+      - "traefik.protocol=http"
+      # Remove next line to disable login prompt for the dashboard.
+      - "traefik.frontend.auth.basic=${BASIC_AUTH}"
 
-  app:
+  matomo:
     image: matomo
     restart: always
     volumes:
@@ -23,9 +45,34 @@ services:
       - MATOMO_DATABASE_HOST=db
     env_file:
       - ./db.env
-    ports:
-      - 8080:80
+    #ports:
+    #  - 8080:80
+    networks:
+      - "lb"
+      - "backend"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.matomo.rule=Host(`loopback.opstad.lan`)"
+      - "traefik.http.routers.matomo.entrypoints=websecure"
+      - "traefik.http.routers.matomo.tls.certresolver=myresolver"
+
+  db:
+    image: mariadb
+    command: --max-allowed-packet=64MB
+    restart: always
+    volumes:
+      - db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_PW}
+    env_file:
+      - ./db.env
+    networks:
+      - "backend"
 
 volumes:
   db:
   matomo:
+
+networks:
+  lb:
+  backend:
