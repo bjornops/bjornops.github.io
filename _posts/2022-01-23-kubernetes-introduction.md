@@ -19,60 +19,91 @@ You may be a product owner that wants know the relations between the different c
 
 Containers is the fundament of Kubernetes, which just is a container orchestrating tool.
 There are many articles on containers, so I won't go into much detail here.
-**todo: find container articles**
+**(todo: find container articles)**
 The main concept is that you create an environment in which your application runs and the environment contains all the dependencies that the app needs to run.
 Without any intervene from Operations, you can use, upgrade and run multiple versions of dotnet, java, python, etc. without them interfering with each other.
 
 ## Case
 
-Instead of explaining abstractly how the most relevant components of Kubernetes works, we're going to use a concrete example.
+Instead of explaining abstractly how the most relevant components of Kubernetes works, I'm going to use a concrete example.
+
+Beneath you can see a figure that is an overview of the hardware involved in a hypothetical, already existing solution.
+It's a low-to-medium complex solution, but will suffice to demonstrate the capabilities of Kubernetes.
 
 {: .text-center}
-![Figure](/assets/posts/2022-kubernetes-intro/case.png){: .align-center}
-**
+![Figure](/assets/posts/2022-kubernetes-intro/case.png){: .align-center width="90%" }
+*The architecture we want to mimic in our Kubernetes solution.*
 
+At the left hand side, we have our consumer.
+The consumer can either be a business using our APIs, or a customer viewing our UI.
+Either way, they're entering through our loadbalancer, the green square with the arrows within, that distributes the traffic according to the URL and current load on the servers within the target group.
 
+Both the `Frontend` and `Backend` groups use an `Internal` service that is not eligible for public exposure, also covered by a loadbalancer.
+
+To ensure that all the different types of services are available at all times, they are running across two servers respectively.
+That totals six servers.
+
+With that case explained, let's get to Kubernetes!
 
 ## Kubernetes
 
+To solve this case, I'll go bottom-up, starting at the simplest topics and building gradually more until we reach a satisfying solution.
+The simplest part here is our applications, hosted in their containers.
 
 ### Pods
 
-Pods are the instances of your application, and just an encapsulation of the container described above.
+In Kubernetes, Pods are the instances of your application, and just an encapsulation of the containers that I described introductory.
+
+The pod also enables you to run multiple containers, but we'll let that be an advanced topic for those interested.
 
 {: .text-center}
 ![Figure](/assets/posts/2022-kubernetes-intro/kubernetes-pod.png){: .align-center}
 *A pod. In this case with just one container*
 
+We now have a basis for running our application, and this could technically be deployed to Kubernetes, so let's.
 
 ### Node
 
+Of course an application isn't worth much by itself, it needs some hardware to run.
+That is also true for Kubernetes.
+In Kubernetes, the servers that host your applications are called nodes.
+
+This is the most technical I'll go into the workings of Kubernetes in this article, so bear with me.
+In order to be a Kubernetes Node, there are two requirements:
+1) Run a container runtime (Docker, containerd, etc.)
+2) Run some Kubernetes tools.
+
+The Kubelet is necessary for maintaining the containers running on its node, including spawning new, stopping or restarting them.
+The kube-proxy enables the containers to communicate with other containers that run on other nodes, thus the kube-proxy works as a sort of relay.
+
+<!-- Todo: Include kernel? -->
+
 {: .text-center}
-![Figure](/assets/posts/2022-kubernetes-intro/kubernetes-node.png){: .align-center}
+![Figure](/assets/posts/2022-kubernetes-intro/kubernetes-node.png){: .align-center width="75%"}
 *A Kubernetes node*
 
 ### Service
 
 {: .text-center}
-![Figure](/assets/posts/2022-kubernetes-intro/kubernetes-service.png){: .align-center}
+![Figure](/assets/posts/2022-kubernetes-intro/kubernetes-service.png){: .align-center width="75%"}
 *A service with two pods*
 
 ### Ingress
 
 {: .text-center}
-![Figure](/assets/posts/2022-kubernetes-intro/kubernetes-ingress.png){: .align-center}
+![Figure](/assets/posts/2022-kubernetes-intro/kubernetes-ingress.png){: .align-center width="75%"}
 *An ingress that points to a single service*
 
 ### Namespace
 
 {: .text-center}
-![Figure](/assets/posts/2022-kubernetes-intro/kubernetes-namespace.png){: .align-center}
+![Figure](/assets/posts/2022-kubernetes-intro/kubernetes-namespace.png){: .align-center width="75%"}
 *A namespace covering two services, X and Y.*
 
 ### Case solution
 
 {: .text-center}
-![Figure](/assets/posts/2022-kubernetes-intro/kubernetes-applied-architecture.png){: .align-center}
+![Figure](/assets/posts/2022-kubernetes-intro/kubernetes-applied-architecture.png){: .align-center width="75%"}
 *A solution for the aforementioned case*
 
 ## Evaluating Kubernetes
@@ -87,60 +118,4 @@ Other applications, such as machine learning tasks that have special hardware re
 
 ## Resources
 
-- *What Is DevOps?* - [New Relic](https://newrelic.com/devops/what-is-devops)
-- *DevOps is a culture, not a role!* [Medium](https://neonrocket.medium.com/devops-is-a-culture-not-a-role-be1bed149b0)
-- [*The DevOps Handbook*](https://itrevolution.com/the-devops-handbook/) by Gene Kim, Jez Humble, Patrick Debois, and John Willis
-- [*The Phoenix Project*](https://itrevolution.com/the-phoenix-project/) by Gene Kim, Kevin Behr and George Spafford
-- *DevOps Roadmap* - [roadmap.sh](https://roadmap.sh/devops)
-- *Site Reliability Engineering* - [sre.google](https://sre.google/workbook/how-sre-relates/)
-- *The DevOps Checklist* - [devopschecklist.com](https://devopschecklist.com)
-
-<!-- 
-- Flow (task workflow)
-  - Deployment pipeline
-  - Automated testing
-  - Low-risk releases
-    - Blue-green, A/B
-    - Monolith/services/microservices
-    - Feature flags
-- Feedback loops
-  - telemetry
-    - business
-    - application
-    - infrastructure
-    - clients
-    - deployment
-
-## Outline
-**Software development Life Cycle**
-- Analysis
-  - Dev
-    - Features
-  - Ops
-    - Delivery
-- Problem description
-  - Conflicting goals
-    - Waterfall product
-  - Not knowing what's happening
-  - Not knowing why
-  - Uncertainty
-- Design
-  - Align goals
-  - Collaboration
-- Implementation
-  - Soft solutions
-    - Enable collaboration (demanded by dev and ops, facilitated by management)
-    - Demand to fix/automate issues immediately
-    - Use post-mortems to learn
-    - Faster feedback loops
-  - Technical solutions
-    - CI/CD
-    - Smaller, non-breaking changes
-    - Telemetry
-- Test
-  - Economical impact
-  - Psychological impact
-- Conclusion
-  - Collaboration
-  - Holistic view
--->
+- *Kubernetes Documentation* - [Kubernetes](https://kubernetes.io/docs/home/)
