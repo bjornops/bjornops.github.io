@@ -66,15 +66,21 @@ We now have a basis for running our application, and this could technically be d
 
 Of course an application isn't worth much by itself, it needs some hardware to run.
 That is also true for Kubernetes.
-In Kubernetes, the servers that host your applications are called nodes.
+Here, the computers that host your applications are called nodes.
 
 This is the most technical I'll go into the workings of Kubernetes in this article, so bear with me.
 In order to be a Kubernetes Node, there are two requirements:
+
 1) Run a container runtime (Docker, containerd, etc.)
 2) Run some Kubernetes tools.
 
+The first requirement is sort of self explanatory.
+For a server (or any computer) to run containers, it needs a container runtime.
+
+However, for Kubernetes to orchestrate the machines part of its cluster, it needs a couple of instruments.
+
 The Kubelet is necessary for maintaining the containers running on its node, including spawning new, stopping or restarting them.
-The kube-proxy enables the containers to communicate with other containers that run on other nodes, thus the kube-proxy works as a sort of relay.
+The Kube proxy enables the containers to communicate with containers that run on other nodes in the cluster, thus the kube-proxy works as a sort of relay.
 
 <!-- Todo: Include kernel? -->
 
@@ -82,11 +88,23 @@ The kube-proxy enables the containers to communicate with other containers that 
 ![Figure](/assets/posts/2022-kubernetes-intro/kubernetes-node.png){: .align-center width="75%"}
 *A Kubernetes node*
 
+So now we have a pod and a node to run it.
+
+*Todo: transition*
+
 ### Service
+
+A *service* enables other components of the cluster to utilize the application we have running in our pod.
+It serves as a connectivity layer, and makes the pod or pods that it covers available in the Kubernetes network.
+Now, if any other pod wants to connect to our application, it can use the service name as a URL.
+The Kubernetes DNS together with the Kube proxy will guide the traffic to our pod.
 
 {: .text-center}
 ![Figure](/assets/posts/2022-kubernetes-intro/kubernetes-service.png){: .align-center width="75%"}
 *A service with two pods*
+
+Pod A and B in the figure can be running the same application or different ones, but you would be best served providing only one application, as the traffic could be directed to either one of them.
+So for a consistent experience, please use replicas of the same pod.
 
 ### Ingress
 
