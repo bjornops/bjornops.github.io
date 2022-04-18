@@ -104,9 +104,16 @@ The Kubernetes DNS together with the Kube proxy will guide the traffic to our po
 *A service with two pods*
 
 Pod A and B in the figure can be running the same application or different ones, but you would be best served providing only one application, as the traffic could be directed to either one of them.
-So for a consistent experience, please use replicas of the same pod.
+So for a consistent experience, you should use replicas of the same pod.
+
+The *service* makes the service that the pods provide available for other services and applications in the Kubernetes cluster.
+While certainly useful, it is still not available outside the cluster.
 
 ### Ingress
+
+The *Ingress* provides an entry into the Kubernetes cluster.
+It opens up for HTTP traffic and let outside users access whatever the services expose.
+An ingress can point to an arbitrary number of services with their respective address rules, e.g. a path prefix such as `/backend/service-1`.
 
 {: .text-center}
 ![Figure](/assets/posts/2022-kubernetes-intro/kubernetes-ingress.png){: .align-center width="75%"}
