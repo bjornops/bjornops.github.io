@@ -1,0 +1,70 @@
+<mxfile host="65bd71144e">
+    <diagram id="NTggyJCynQgeLz50KwM_" name="Page-1">
+        <mxGraphModel dx="1118" dy="782" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Languages" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+                    <mxGeometry x="281" y="304" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Frameworks" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+                    <mxGeometry x="425" y="304" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" style="edgeStyle=none;html=1;exitX=0.625;exitY=0.2;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="10">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Techniques" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="351" y="199" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Frontend" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+                    <mxGeometry x="208" y="410" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Backend" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+                    <mxGeometry x="356" y="410" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Data" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+                    <mxGeometry x="511" y="410" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Machine Learning" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="592" y="500" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="AI" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="476" y="500" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="&lt;ul&gt;&lt;li&gt;&lt;span&gt;Agile / W&lt;/span&gt;aterfall&lt;/li&gt;&lt;li&gt;&lt;span&gt;Kanban / Scrum&lt;br&gt;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="431" y="90" width="180" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Security" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="579" y="304" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Roles" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+                    <mxGeometry x="511" y="199" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="&lt;ul&gt;&lt;li&gt;&lt;span&gt;Architect&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Developer&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Data engineer&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Tester&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="641" y="170" width="153" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Testing" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="729" y="304" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="DevOps" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+                    <mxGeometry x="141" y="304" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Methodology" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+                    <mxGeometry x="11" y="199" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Meta" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+                    <mxGeometry x="11" y="304" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Classes" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+                    <mxGeometry x="11" y="410" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Gaming" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+                    <mxGeometry x="670" y="410" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Architecture" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="870" y="304" width="120" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
