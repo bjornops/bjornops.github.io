@@ -9,6 +9,10 @@ tags:
   - General
 ---
 
+{: .text-center}
+![hey](/assets/posts/s-j-yJVpnfqu8GY-unsplash.jpg)
+*Photo by [s j](https://unsplash.com/@sjjillan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/t0SlmanfFcg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)*
+
 In modern software development, files are often seen as a nuisance and mostly taken for granted.
 I would like to state my appreciation of files.
 
