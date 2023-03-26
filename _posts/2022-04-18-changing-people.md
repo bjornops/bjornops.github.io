@@ -1,6 +1,7 @@
 ---
 title: "Helping Others Change"
 last_modified_at: 2022-04-18T18:00:02+02:00
+published: false
 excerpt: "There may be a lot of reasons to change others, but manipulation is not one of them."
 categories:
   - Blog
